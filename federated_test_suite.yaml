@@ -1,0 +1,17 @@
+name: federated_test_suite
+type: evaluation
+version: 1.0.0
+description: Test suite for federated architecture
+author: federated_test_system
+tests:
+- name: basic_functionality
+  description: Test basic agent functionality
+  input: Hello, test agent
+  expected: response
+  criteria: Agent should respond appropriately
+metadata:
+  tags:
+  - federated
+  - architecture
+  - test
+  test_type: integration
