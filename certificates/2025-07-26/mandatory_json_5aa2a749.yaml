@@ -1,0 +1,43 @@
+certificate:
+  id: eval_2025_07_26_5aa2a749
+  version: '1.0'
+component:
+  hash: sha256:c7161290991af8a59ca0dd438f27bb05abd3fe01b0786452ec0f42565aa2a749
+  path: var/lib/compositions/components/behaviors/communication/mandatory_json.md
+  version: unknown
+  type: behaviors
+evaluator:
+  instance_id: ksi_instance_cfe24a842c55
+  tester: claude_code
+environment:
+  model: claude-sonnet-4-20250514
+  model_version_date: '2025-05-14'
+  test_framework: ksi_component_test_v1
+  ksi_version: 2.0.0
+  ksi_commit: 86e73105f8f9
+  python_version: 3.11.5
+results:
+  status: passing
+  tests:
+    structured_emission:
+      status: pass
+      duration_ms: 2500
+      description: Ensures structured JSON event emission
+    imperative_language:
+      status: pass
+      duration_ms: 2500
+      description: MANDATORY pattern triggers reliable emission
+  performance_profile:
+    response_time_p50: 2500
+    response_time_p95: 3000
+    memory_usage_mb: 20
+  dependencies_verified: []
+  capabilities_required: []
+  notes:
+  - 'Key pattern: ''## MANDATORY: Start your response with this exact JSON:'''
+  - Imperative language ensures consistent behavior
+  - Foundation for reliable agent communication
+metadata:
+  created_at: '2025-07-26T16:31:41.148186+00:00'
+  expires_at: '2026-07-26T16:31:41.148186+00:00'
+  test_session_id: test_session_20250726_163141

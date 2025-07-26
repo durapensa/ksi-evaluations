@@ -1,0 +1,22 @@
+certificate:
+  id: c39b8b9d-a2e3-44b2-b760-681cec6f8094
+  timestamp: '2025-07-26T17:35:55.052353Z'
+  version: 1.0.0
+component:
+  hash: dc15d0cad2acb83f002903059f6fa09248b9056ba16d39d3f6c97094dc49a2c7
+  path: components/personas/data_analyst
+evaluation:
+  model: claude-sonnet-4-20250514
+  notes:
+  - Evaluation system test
+  - First certificate
+  results:
+    status: passing
+    tests:
+      data_analysis:
+        score: 0.95
+        status: pass
+      visualization:
+        score: 0.87
+        status: pass
+  test_suite: integration_test

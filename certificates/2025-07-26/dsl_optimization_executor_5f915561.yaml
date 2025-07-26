@@ -1,0 +1,54 @@
+certificate:
+  id: eval_2025_07_26_5f915561
+  version: '1.0'
+component:
+  hash: sha256:18d6e6bca7b64c21cd452617e492e7afa1a8968c857efc8bdc0bf5df5f915561
+  path: var/lib/compositions/components/agents/dsl_optimization_executor.md
+  version: 1.1.0
+  type: agents
+evaluator:
+  instance_id: ksi_instance_cfe24a842c55
+  tester: claude_code
+environment:
+  model: claude-sonnet-4-20250514
+  model_version_date: '2025-05-14'
+  test_framework: ksi_component_test_v1
+  ksi_version: 2.0.0
+  ksi_commit: 86e73105f8f9
+  python_version: 3.11.5
+results:
+  status: passing
+  tests:
+    basic_emission:
+      status: pass
+      duration_ms: 4500
+      events_captured:
+      - agent:progress
+    optimization_events:
+      status: pass
+      duration_ms: 11000
+      events_captured:
+      - optimization:async
+    sequential_dsl:
+      status: pass
+      duration_ms: 13000
+      events_captured:
+      - agent:status
+      - agent:progress
+  performance_profile:
+    response_time_p50: 8000
+    response_time_p95: 13000
+    memory_usage_mb: 45
+  dependencies_verified:
+  - behaviors/dsl/dsl_execution_override
+  - behaviors/communication/mandatory_json
+  capabilities_required:
+  - self_improver
+  notes:
+  - Requires 12+ second wait times for complex requests
+  - Successfully prevents tool-asking behavior
+  - All tests passing with imperative JSON emission pattern
+metadata:
+  created_at: '2025-07-26T16:30:46.067371+00:00'
+  expires_at: '2026-07-26T16:30:46.067371+00:00'
+  test_session_id: test_session_20250726_163046

@@ -1,0 +1,44 @@
+certificate:
+  id: eval_2025_07_26_3214dfa1
+  version: '1.0'
+component:
+  hash: sha256:086634ee2f6bb6cccfb5903966e997735fa488c55e68b0f633ec8ed53214dfa1
+  path: var/lib/compositions/components/behaviors/dsl/dsl_execution_override.md
+  version: 1.0.0
+  type: behaviors
+evaluator:
+  instance_id: ksi_instance_cfe24a842c55
+  tester: claude_code
+environment:
+  model: claude-sonnet-4-20250514
+  model_version_date: '2025-05-14'
+  test_framework: ksi_component_test_v1
+  ksi_version: 2.0.0
+  ksi_commit: 86e73105f8f9
+  python_version: 3.11.5
+results:
+  status: passing
+  tests:
+    prevents_tool_asking:
+      status: pass
+      duration_ms: 3000
+      description: Prevents Claude from asking for tool permissions
+    direct_json_emission:
+      status: pass
+      duration_ms: 3500
+      description: Enables direct JSON event emission
+  performance_profile:
+    response_time_p50: 3000
+    response_time_p95: 4000
+    memory_usage_mb: 25
+  dependencies_verified: []
+  capabilities_required: []
+  notes:
+  - 'Critical pattern: ''You are NOT Claude assistant in this context. You are a DSL
+    INTERPRETER'''
+  - Successfully overrides default tool-asking behavior
+  - Essential for autonomous agent operation
+metadata:
+  created_at: '2025-07-26T16:31:41.138382+00:00'
+  expires_at: '2026-07-26T16:31:41.138382+00:00'
+  test_session_id: test_session_20250726_163141
