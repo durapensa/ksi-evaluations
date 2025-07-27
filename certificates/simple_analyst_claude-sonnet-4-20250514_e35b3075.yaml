@@ -1,0 +1,21 @@
+certificate:
+  id: e35b3075-8e29-4162-8ff9-37669c381368
+  timestamp: '2025-07-27T00:05:35.207123Z'
+  version: 1.0.0
+component:
+  hash: 6f1927d8abae1c71fe5ed5a60315b46ff04463412f6e2c69097e90c17c062464
+  path: components/examples/simple_analyst
+evaluation:
+  model: claude-sonnet-4-20250514
+  notes:
+  - Test of core evaluation events after cleanup
+  results:
+    status: passing
+    tests:
+      basic_analysis:
+        score: 0.9
+        status: pass
+      initialization:
+        score: 1.0
+        status: pass
+  test_suite: basic_functionality
