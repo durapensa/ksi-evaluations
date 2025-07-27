@@ -220,6 +220,11 @@ components:
       model: claude-sonnet-4-20250514
       status: unknown
       test_suite: basic_effectiveness
+    - certificate_id: eval_2025_07_27_22a107af
+      date: '2025-07-27'
+      model: claude-sonnet-4-20250514
+      status: unknown
+      test_suite: behavioral_effectiveness
     path: var/lib/compositions/components/behaviors/core/claude_code_override.md
     version: 2.0.0
   sha256:c7161290991af8a59ca0dd438f27bb05abd3fe01b0786452ec0f42565aa2a749:
@@ -271,5 +276,5 @@ components:
 instance:
   id: ksi_instance_cfe24a842c55
   name: KSI Development Instance
-last_updated: '2025-07-27T14:40:59.113059+00:00'
+last_updated: '2025-07-27T16:58:20.157710+00:00'
 registry_version: 1.0.0
