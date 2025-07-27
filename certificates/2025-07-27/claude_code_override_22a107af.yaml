@@ -1,0 +1,26 @@
+certificate:
+  id: eval_2025_07_27_22a107af
+  version: '1.0'
+component:
+  hash: sha256:2bfa4818d46e84d323047bdc08f3dbd1f0b68f5f32701a2cf111d03b22a107af
+  path: var/lib/compositions/components/behaviors/core/claude_code_override.md
+  version: 2.0.0
+  type: behaviors
+evaluator:
+  instance_id: ksi_instance_cfe24a842c55
+  tester: claude_code
+environment:
+  model: claude-sonnet-4-20250514
+  model_version_date: '2025-05-14'
+  test_framework: ksi_component_test_v1
+  ksi_version: 2.0.0
+  ksi_commit: ae75db81457b
+  python_version: 3.11.5
+results:
+  status: unknown
+  test_suite: basic_effectiveness
+  tests: {}
+metadata:
+  created_at: '2025-07-27T14:40:59.091468+00:00'
+  expires_at: '2026-07-27T14:40:59.091468+00:00'
+  test_session_id: test_session_20250727_144059

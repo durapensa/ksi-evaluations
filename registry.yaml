@@ -1,161 +1,275 @@
-registry_version: 1.0.0
-last_updated: '2025-07-27T13:07:09.196972'
+components:
+  6f1927d8abae1c71fe5ed5a60315b46ff04463412f6e2c69097e90c17c062464:
+    evaluations:
+    - certificate_id: e35b3075-8e29-4162-8ff9-37669c381368
+      date: '2025-07-27'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: basic_functionality
+    - certificate_id: e35b3075-8e29-4162-8ff9-37669c381368
+      date: '2025-07-27'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: basic_functionality
+    - certificate_id: e35b3075-8e29-4162-8ff9-37669c381368
+      date: '2025-07-27'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: basic_functionality
+    - certificate_id: e35b3075-8e29-4162-8ff9-37669c381368
+      date: '2025-07-27'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: basic_functionality
+    - certificate_id: e35b3075-8e29-4162-8ff9-37669c381368
+      date: '2025-07-27'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: basic_functionality
+    path: components/examples/simple_analyst
+    version: unknown
+  dc15d0cad2acb83f002903059f6fa09248b9056ba16d39d3f6c97094dc49a2c7:
+    evaluations:
+    - certificate_id: c39b8b9d-a2e3-44b2-b760-681cec6f8094
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: integration_test
+    - certificate_id: 29de453f-2c5b-47bd-a1c1-e367ca191b30
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: integration_test
+    - certificate_id: 9c6f7e6e-5fee-4240-8d1f-25c9a60e9945
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: integration_test
+    - certificate_id: c39b8b9d-a2e3-44b2-b760-681cec6f8094
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: integration_test
+    - certificate_id: 29de453f-2c5b-47bd-a1c1-e367ca191b30
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: integration_test
+    - certificate_id: 9c6f7e6e-5fee-4240-8d1f-25c9a60e9945
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: integration_test
+    - certificate_id: c39b8b9d-a2e3-44b2-b760-681cec6f8094
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: integration_test
+    - certificate_id: 29de453f-2c5b-47bd-a1c1-e367ca191b30
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: integration_test
+    - certificate_id: 9c6f7e6e-5fee-4240-8d1f-25c9a60e9945
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: integration_test
+    - certificate_id: c39b8b9d-a2e3-44b2-b760-681cec6f8094
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: integration_test
+    - certificate_id: 29de453f-2c5b-47bd-a1c1-e367ca191b30
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: integration_test
+    - certificate_id: 9c6f7e6e-5fee-4240-8d1f-25c9a60e9945
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: integration_test
+    - certificate_id: c39b8b9d-a2e3-44b2-b760-681cec6f8094
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: integration_test
+    - certificate_id: 29de453f-2c5b-47bd-a1c1-e367ca191b30
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: integration_test
+    - certificate_id: 9c6f7e6e-5fee-4240-8d1f-25c9a60e9945
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: integration_test
+    path: components/personas/data_analyst
+    version: unknown
+  sha256:086634ee2f6bb6cccfb5903966e997735fa488c55e68b0f633ec8ed53214dfa1:
+    evaluations:
+    - certificate_id: eval_2025_07_26_3214dfa1
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: fast
+      status: passing
+      tests_passed: 2
+      tests_total: 2
+    - certificate_id: eval_2025_07_26_3214dfa1
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 2
+      tests_total: 2
+    - certificate_id: eval_2025_07_26_3214dfa1
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 2
+      tests_total: 2
+    - certificate_id: eval_2025_07_26_3214dfa1
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 2
+      tests_total: 2
+    - certificate_id: eval_2025_07_26_3214dfa1
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 2
+      tests_total: 2
+    - certificate_id: eval_2025_07_26_3214dfa1
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 2
+      tests_total: 2
+    path: var/lib/compositions/components/behaviors/dsl/dsl_execution_override.md
+    version: 1.0.0
+  sha256:18d6e6bca7b64c21cd452617e492e7afa1a8968c857efc8bdc0bf5df5f915561:
+    evaluations:
+    - certificate_id: eval_2025_07_26_5f915561
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 3
+      tests_total: 3
+    - certificate_id: eval_2025_07_26_5f915561
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 3
+      tests_total: 3
+    - certificate_id: eval_2025_07_26_5f915561
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 3
+      tests_total: 3
+    - certificate_id: eval_2025_07_26_5f915561
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 3
+      tests_total: 3
+    - certificate_id: eval_2025_07_26_5f915561
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 3
+      tests_total: 3
+    - certificate_id: eval_2025_07_26_5f915561
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 3
+      tests_total: 3
+    - certificate_id: eval_2025_07_26_5f915561
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 3
+      tests_total: 3
+    path: var/lib/compositions/components/agents/dsl_optimization_executor.md
+    version: 1.1.0
+  sha256:2bfa4818d46e84d323047bdc08f3dbd1f0b68f5f32701a2cf111d03b22a107af:
+    evaluations:
+    - certificate_id: eval_2025_07_27_22a107af
+      date: '2025-07-27'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: unknown
+      tests_passed: 0
+      tests_total: 0
+    - certificate_id: eval_2025_07_27_22a107af
+      date: '2025-07-27'
+      model: claude-sonnet-4-20250514
+      status: unknown
+      test_suite: basic_effectiveness
+    path: var/lib/compositions/components/behaviors/core/claude_code_override.md
+    version: 2.0.0
+  sha256:c7161290991af8a59ca0dd438f27bb05abd3fe01b0786452ec0f42565aa2a749:
+    evaluations:
+    - certificate_id: eval_2025_07_26_5aa2a749
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: fast
+      status: passing
+      tests_passed: 2
+      tests_total: 2
+    - certificate_id: eval_2025_07_26_5aa2a749
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 2
+      tests_total: 2
+    - certificate_id: eval_2025_07_26_5aa2a749
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 2
+      tests_total: 2
+    - certificate_id: eval_2025_07_26_5aa2a749
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 2
+      tests_total: 2
+    - certificate_id: eval_2025_07_26_5aa2a749
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 2
+      tests_total: 2
+    - certificate_id: eval_2025_07_26_5aa2a749
+      date: '2025-07-26'
+      model: claude-sonnet-4-20250514
+      performance_class: standard
+      status: passing
+      tests_passed: 2
+      tests_total: 2
+    path: var/lib/compositions/components/behaviors/communication/mandatory_json.md
+    version: unknown
 instance:
   id: ksi_instance_cfe24a842c55
   name: KSI Development Instance
-components:
-  sha256:18d6e6bca7b64c21cd452617e492e7afa1a8968c857efc8bdc0bf5df5f915561:
-    path: var/lib/compositions/components/agents/dsl_optimization_executor.md
-    version: 1.1.0
-    evaluations:
-    - certificate_id: eval_2025_07_26_5f915561
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      tests_passed: 3
-      tests_total: 3
-      performance_class: standard
-    - certificate_id: eval_2025_07_26_5f915561
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      tests_passed: 3
-      tests_total: 3
-      performance_class: standard
-    - certificate_id: eval_2025_07_26_5f915561
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      tests_passed: 3
-      tests_total: 3
-      performance_class: standard
-    - certificate_id: eval_2025_07_26_5f915561
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      tests_passed: 3
-      tests_total: 3
-      performance_class: standard
-  sha256:93c96cfafe77ea7bf25620690f3dc9e8d1ec9bfe67fe470d61c0282ad0db55f1:
-    path: var/lib/compositions/components/behaviors/orchestration/claude_code_override.md
-    version: 1.0.0
-    evaluations:
-    - certificate_id: eval_2025_07_26_d0db55f1
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      tests_passed: 3
-      tests_total: 3
-      performance_class: fast
-    - certificate_id: eval_2025_07_26_d0db55f1
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      tests_passed: 3
-      tests_total: 3
-      performance_class: standard
-    - certificate_id: eval_2025_07_26_d0db55f1
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      tests_passed: 3
-      tests_total: 3
-      performance_class: standard
-  sha256:c7161290991af8a59ca0dd438f27bb05abd3fe01b0786452ec0f42565aa2a749:
-    path: var/lib/compositions/components/behaviors/communication/mandatory_json.md
-    version: unknown
-    evaluations:
-    - certificate_id: eval_2025_07_26_5aa2a749
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      tests_passed: 2
-      tests_total: 2
-      performance_class: fast
-    - certificate_id: eval_2025_07_26_5aa2a749
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      tests_passed: 2
-      tests_total: 2
-      performance_class: standard
-    - certificate_id: eval_2025_07_26_5aa2a749
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      tests_passed: 2
-      tests_total: 2
-      performance_class: standard
-  sha256:086634ee2f6bb6cccfb5903966e997735fa488c55e68b0f633ec8ed53214dfa1:
-    path: var/lib/compositions/components/behaviors/dsl/dsl_execution_override.md
-    version: 1.0.0
-    evaluations:
-    - certificate_id: eval_2025_07_26_3214dfa1
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      tests_passed: 2
-      tests_total: 2
-      performance_class: fast
-    - certificate_id: eval_2025_07_26_3214dfa1
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      tests_passed: 2
-      tests_total: 2
-      performance_class: standard
-    - certificate_id: eval_2025_07_26_3214dfa1
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      tests_passed: 2
-      tests_total: 2
-      performance_class: standard
-  dc15d0cad2acb83f002903059f6fa09248b9056ba16d39d3f6c97094dc49a2c7:
-    path: components/personas/data_analyst
-    version: unknown
-    evaluations:
-    - certificate_id: c39b8b9d-a2e3-44b2-b760-681cec6f8094
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      test_suite: integration_test
-    - certificate_id: 29de453f-2c5b-47bd-a1c1-e367ca191b30
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      test_suite: integration_test
-    - certificate_id: 9c6f7e6e-5fee-4240-8d1f-25c9a60e9945
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      test_suite: integration_test
-    - certificate_id: c39b8b9d-a2e3-44b2-b760-681cec6f8094
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      test_suite: integration_test
-    - certificate_id: 29de453f-2c5b-47bd-a1c1-e367ca191b30
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      test_suite: integration_test
-    - certificate_id: 9c6f7e6e-5fee-4240-8d1f-25c9a60e9945
-      date: '2025-07-26'
-      model: claude-sonnet-4-20250514
-      status: passing
-      test_suite: integration_test
-  6f1927d8abae1c71fe5ed5a60315b46ff04463412f6e2c69097e90c17c062464:
-    path: components/examples/simple_analyst
-    version: unknown
-    evaluations:
-    - certificate_id: e35b3075-8e29-4162-8ff9-37669c381368
-      date: '2025-07-27'
-      model: claude-sonnet-4-20250514
-      status: passing
-      test_suite: basic_functionality
-    - certificate_id: e35b3075-8e29-4162-8ff9-37669c381368
-      date: '2025-07-27'
-      model: claude-sonnet-4-20250514
-      status: passing
-      test_suite: basic_functionality
+last_updated: '2025-07-27T14:40:59.113059+00:00'
+registry_version: 1.0.0
