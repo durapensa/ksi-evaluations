@@ -1,11 +1,11 @@
 certificate:
-  id: eval_2025_07_27_22a107af
+  id: eval_2025_07_27_9aee7170
   version: '1.0'
 component:
-  hash: sha256:2bfa4818d46e84d323047bdc08f3dbd1f0b68f5f32701a2cf111d03b22a107af
-  path: var/lib/compositions/components/behaviors/core/claude_code_override.md
+  hash: sha256:ed68507097367dc195d26ad544546620c9fe7b6a03fc945c8e4b29f29aee7170
+  path: var/lib/compositions/components/core/base_agent.md
   version: 2.0.0
-  type: behaviors
+  type: core
 evaluator:
   instance_id: ksi_instance_cfe24a842c55
   tester: claude_code
@@ -21,6 +21,6 @@ results:
   test_suite: manual_validation
   tests: {}
 metadata:
-  created_at: '2025-07-27T20:22:07.657257+00:00'
-  expires_at: '2026-07-27T20:22:07.657257+00:00'
-  test_session_id: test_session_20250727_202207
+  created_at: '2025-07-27T20:21:49.694118+00:00'
+  expires_at: '2026-07-27T20:21:49.694118+00:00'
+  test_session_id: test_session_20250727_202149

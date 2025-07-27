@@ -14,13 +14,13 @@ environment:
   model_version_date: '2025-05-14'
   test_framework: ksi_component_test_v1
   ksi_version: 2.0.0
-  ksi_commit: 0fd67dedca36
+  ksi_commit: 97203fda8653
   python_version: 3.11.5
 results:
   status: unknown
-  test_suite: basic_functionality
+  test_suite: manual_validation
   tests: {}
 metadata:
-  created_at: '2025-07-27T19:12:17.584736+00:00'
-  expires_at: '2026-07-27T19:12:17.584736+00:00'
-  test_session_id: test_session_20250727_191217
+  created_at: '2025-07-27T20:22:01.782477+00:00'
+  expires_at: '2026-07-27T20:22:01.782477+00:00'
+  test_session_id: test_session_20250727_202201
