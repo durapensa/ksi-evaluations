@@ -3,7 +3,7 @@ certificate:
   version: '1.0'
 component:
   hash: sha256:2372003116aa70b9228adfebbe767b753fca3914bd1360d76fcb72d2a38570a4
-  path: var/lib/compositions/components/agents/tool_use_test_agent.md
+  path: /Users/dp/projects/ksi/var/lib/compositions/components/agents/tool_use_test_agent.md
   version: 2.0.0
   type: agents
 evaluator:
@@ -14,13 +14,20 @@ environment:
   model_version_date: '2025-05-14'
   test_framework: ksi_component_test_v1
   ksi_version: 2.0.0
-  ksi_commit: 97203fda8653
+  ksi_commit: ebd4017ae3e5
   python_version: 3.11.5
 results:
-  status: unknown
-  test_suite: manual_validation
-  tests: {}
+  status: passing
+  test_suite: tool_use_validation
+  tests_passed: 2
+  tests_total: 2
+  performance_class: standard
+  notes:
+  - Manual validation by Claude Code
+  - Tool use pattern verification
+  manual_validation: true
+  evaluation_method: claude_code_manual_review
 metadata:
-  created_at: '2025-07-27T20:21:55.593942+00:00'
-  expires_at: '2026-07-27T20:21:55.593942+00:00'
-  test_session_id: test_session_20250727_202155
+  created_at: '2025-07-27T20:47:21.920095+00:00'
+  expires_at: '2026-07-27T20:47:21.920095+00:00'
+  test_session_id: test_session_20250727_204721
