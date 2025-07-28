@@ -3,9 +3,14 @@ certificate:
   version: '1.0'
 component:
   hash: sha256:ed68507097367dc195d26ad544546620c9fe7b6a03fc945c8e4b29f29aee7170
-  path: /Users/dp/projects/ksi/var/lib/compositions/components/core/base_agent.md
+  path: var/lib/compositions/components/core/base_agent.md
   version: 2.0.0
   type: core
+  dependencies:
+  - path: behaviors/core/claude_code_override
+    hash: sha256:2bfa4818d46e84d323047bdc08f3dbd1f0b68f5f32701a2cf111d03b22a107af
+  - path: behaviors/communication/ksi_events_as_tool_calls
+    hash: sha256:d3c8b1dbc6e39ede8e70a02c3c140049b5f7c085b2f03469d4a4493338acd030
 evaluator:
   instance_id: ksi_instance_cfe24a842c55
   tester: claude_code
@@ -14,20 +19,15 @@ environment:
   model_version_date: '2025-05-14'
   test_framework: ksi_component_test_v1
   ksi_version: 2.0.0
-  ksi_commit: ebd4017ae3e5
+  ksi_commit: 55b1239525f9
   python_version: 3.11.5
 results:
-  status: passing
-  test_suite: tool_use_validation
-  tests_passed: 3
-  tests_total: 3
-  performance_class: standard
+  status: error
+  test_suite: basic_functionality
+  tests: {}
   notes:
-  - Manual validation by Claude Code
-  - Tool use pattern verification
-  manual_validation: true
-  evaluation_method: claude_code_manual_review
+  - 'Evaluation failed: name ''full_path'' is not defined'
 metadata:
-  created_at: '2025-07-27T20:47:21.911466+00:00'
-  expires_at: '2026-07-27T20:47:21.911466+00:00'
-  test_session_id: test_session_20250727_204721
+  created_at: '2025-07-27T22:53:33.030671+00:00'
+  expires_at: '2026-07-27T22:53:33.030671+00:00'
+  test_session_id: test_session_20250727_225333

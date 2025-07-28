@@ -235,6 +235,16 @@ components:
       model: claude-sonnet-4
       status: unknown
       test_suite: manual_validation
+    - certificate_id: eval_2025_07_27_22a107af
+      date: '2025-07-27'
+      model: claude-sonnet-4
+      status: timeout
+      test_suite: basic_functionality
+    - certificate_id: eval_2025_07_27_22a107af
+      date: '2025-07-27'
+      model: claude-sonnet-4
+      status: error
+      test_suite: basic_functionality
     path: components/behaviors/core/claude_code_override.md
     version: 2.0.0
   sha256:c7161290991af8a59ca0dd438f27bb05abd3fe01b0786452ec0f42565aa2a749:
@@ -292,6 +302,61 @@ components:
       model: claude-sonnet-4
       status: unknown
       test_suite: manual_validation
+    - certificate_id: eval_2025_07_27_9aee7170
+      date: '2025-07-27'
+      model: claude-sonnet-4
+      status: passing
+      test_suite: tool_use_validation
+    - certificate_id: eval_2025_07_27_9aee7170
+      date: '2025-07-27'
+      model: claude-sonnet-4
+      status: error
+      test_suite: basic_functionality
+    - certificate_id: eval_2025_07_27_9aee7170
+      date: '2025-07-27'
+      model: claude-sonnet-4
+      status: error
+      test_suite: basic_functionality
+    - certificate_id: eval_2025_07_27_9aee7170
+      date: '2025-07-27'
+      model: claude-sonnet-4
+      status: error
+      test_suite: basic_functionality
+    - certificate_id: eval_2025_07_27_9aee7170
+      date: '2025-07-27'
+      model: claude-sonnet-4
+      status: error
+      test_suite: basic_functionality
+    - certificate_id: eval_2025_07_27_9aee7170
+      date: '2025-07-27'
+      model: claude-sonnet-4
+      status: error
+      test_suite: basic_functionality
+    - certificate_id: eval_2025_07_27_9aee7170
+      date: '2025-07-27'
+      model: claude-sonnet-4
+      status: error
+      test_suite: basic_functionality
+    - certificate_id: eval_2025_07_27_9aee7170
+      date: '2025-07-27'
+      model: claude-sonnet-4
+      status: error
+      test_suite: basic_functionality
+    - certificate_id: eval_2025_07_27_9aee7170
+      date: '2025-07-27'
+      model: claude-sonnet-4
+      status: failing
+      test_suite: basic_functionality
+    - certificate_id: eval_2025_07_27_9aee7170
+      date: '2025-07-27'
+      model: claude-sonnet-4
+      status: passing
+      test_suite: basic_functionality
+    - certificate_id: eval_2025_07_27_9aee7170
+      date: '2025-07-27'
+      model: claude-sonnet-4
+      status: error
+      test_suite: basic_functionality
   sha256:2372003116aa70b9228adfebbe767b753fca3914bd1360d76fcb72d2a38570a4:
     path: components/agents/tool_use_test_agent.md
     version: 2.0.0
@@ -310,8 +375,18 @@ components:
       model: claude-sonnet-4
       status: unknown
       test_suite: manual_validation
+    - certificate_id: eval_2025_07_27_38acd030
+      date: '2025-07-27'
+      model: claude-sonnet-4
+      status: passing
+      test_suite: tool_use_validation
+    - certificate_id: eval_2025_07_27_38acd030
+      date: '2025-07-27'
+      model: claude-sonnet-4
+      status: error
+      test_suite: basic_functionality
 instance:
   id: ksi_instance_cfe24a842c55
   name: KSI Development Instance
-last_updated: '2025-07-27T20:22:07.665637+00:00'
+last_updated: '2025-07-27T22:54:03.797174+00:00'
 registry_version: 1.0.0

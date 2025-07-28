@@ -14,13 +14,18 @@ environment:
   model_version_date: '2025-05-14'
   test_framework: ksi_component_test_v1
   ksi_version: 2.0.0
-  ksi_commit: 97203fda8653
+  ksi_commit: 55b1239525f9
   python_version: 3.11.5
 results:
-  status: unknown
-  test_suite: manual_validation
+  status: error
+  test_suite: basic_functionality
   tests: {}
+  notes:
+  - 'Failed to spawn test agent: Failed to render component var/lib/compositions/components/behaviors/core/claude_code_override.md:
+    Failed to render component var/lib/compositions/components/behaviors/core/claude_code_override.md
+    to agent manifest: Failed to render component var/lib/compositions/components/behaviors/core/claude_code_override.md:
+    Component not found: var/lib/compositions/components/behaviors/core/claude_code_override.md'
 metadata:
-  created_at: '2025-07-27T20:22:07.657257+00:00'
-  expires_at: '2026-07-27T20:22:07.657257+00:00'
-  test_session_id: test_session_20250727_202207
+  created_at: '2025-07-27T22:51:40.736231+00:00'
+  expires_at: '2026-07-27T22:51:40.736231+00:00'
+  test_session_id: test_session_20250727_225140
