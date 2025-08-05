@@ -1,0 +1,31 @@
+certificate:
+  id: eval_2025_08_04_039027e6
+  version: '1.0'
+component:
+  hash: sha256:8970ed01aa0407d10ce6e9ae06e056c2c95f157dd518ee3fb8d8737f039027e6
+  path: var/lib/compositions/components/behaviors/optimization/strict_instruction_following.md
+  version: 1.0.0
+  type: behaviors
+evaluator:
+  instance_id: ksi_instance_cfe24a842c55
+  tester: claude_code
+environment:
+  model: claude-sonnet-4
+  model_version_date: '2025-05-14'
+  test_framework: ksi_component_test_v1
+  ksi_version: 2.0.0
+  ksi_commit: 1cb0d0afcd95
+  python_version: 3.11.5
+results:
+  status: error
+  test_suite: ksi_tool_use_validation
+  tests: {}
+  notes:
+  - 'Failed to spawn test agent: Failed to render component var/lib/compositions/components/behaviors/optimization/strict_instruction_following.md:
+    Failed to render component var/lib/compositions/components/behaviors/optimization/strict_instruction_following.md
+    to agent manifest: Failed to render component var/lib/compositions/components/behaviors/optimization/strict_instruction_following.md:
+    Component not found: var/lib/compositions/components/behaviors/optimization/strict_instruction_following.md'
+metadata:
+  created_at: '2025-08-04T16:45:14.885904+00:00'
+  expires_at: '2026-08-04T16:45:14.885904+00:00'
+  test_session_id: test_session_20250804_164514

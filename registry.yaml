@@ -245,6 +245,11 @@ components:
       model: claude-sonnet-4
       status: error
       test_suite: basic_functionality
+    - certificate_id: eval_2025_08_04_22a107af
+      date: '2025-08-04'
+      model: claude-sonnet-4
+      status: timeout
+      test_suite: behavioral_effectiveness
     path: components/behaviors/core/claude_code_override.md
     version: 2.0.0
   sha256:c7161290991af8a59ca0dd438f27bb05abd3fe01b0786452ec0f42565aa2a749:
@@ -385,8 +390,66 @@ components:
       model: claude-sonnet-4
       status: error
       test_suite: basic_functionality
+    - certificate_id: eval_2025_08_04_38acd030
+      date: '2025-08-04'
+      model: claude-sonnet-4
+      status: error
+      test_suite: ksi_tool_use_validation
+  sha256:8970ed01aa0407d10ce6e9ae06e056c2c95f157dd518ee3fb8d8737f039027e6:
+    path: components/behaviors/optimization/strict_instruction_following.md
+    version: 1.0.0
+    evaluations:
+    - certificate_id: eval_2025_08_04_039027e6
+      date: '2025-08-04'
+      model: claude-sonnet-4
+      status: error
+      test_suite: ksi_tool_use_validation
+    - certificate_id: eval_2025_08_04_039027e6
+      date: '2025-08-04'
+      model: claude-sonnet-4
+      status: error
+      test_suite: ksi_tool_use_validation
+  sha256:4875f1e6769c9bc812e153ce2deb457bb24d2a73fdca9570b2e1f0525a0ac34e:
+    path: components/behaviors/optimization/strict_instruction_following.md
+    version: 1.0.0
+    evaluations:
+    - certificate_id: eval_2025_08_04_5a0ac34e
+      date: '2025-08-04'
+      model: claude-sonnet-4
+      status: timeout
+      test_suite: ksi_tool_use_validation
+    - certificate_id: eval_2025_08_04_5a0ac34e
+      date: '2025-08-04'
+      model: claude-sonnet-4
+      status: timeout
+      test_suite: ksi_tool_use_validation
+    - certificate_id: eval_2025_08_04_5a0ac34e
+      date: '2025-08-04'
+      model: claude-sonnet-4
+      status: timeout
+      test_suite: ksi_tool_use_validation
+    - certificate_id: eval_2025_08_04_5a0ac34e
+      date: '2025-08-04'
+      model: claude-sonnet-4
+      status: timeout
+      test_suite: ksi_tool_use_validation
+    - certificate_id: eval_2025_08_04_5a0ac34e
+      date: '2025-08-04'
+      model: claude-sonnet-4
+      status: timeout
+      test_suite: ksi_tool_use_validation
+    - certificate_id: eval_2025_08_04_5a0ac34e
+      date: '2025-08-04'
+      model: claude-sonnet-4
+      status: timeout
+      test_suite: ksi_tool_use_validation
+    - certificate_id: eval_2025_08_04_5a0ac34e
+      date: '2025-08-04'
+      model: claude-sonnet-4
+      status: timeout
+      test_suite: ksi_tool_use_validation
 instance:
   id: ksi_instance_cfe24a842c55
   name: KSI Development Instance
-last_updated: '2025-07-27T22:54:03.797174+00:00'
+last_updated: '2025-08-04T18:08:17.023323+00:00'
 registry_version: 1.0.0

@@ -1,0 +1,35 @@
+certificate:
+  id: eval_2025_08_04_5a0ac34e
+  version: '1.0'
+component:
+  hash: sha256:4875f1e6769c9bc812e153ce2deb457bb24d2a73fdca9570b2e1f0525a0ac34e
+  path: var/lib/compositions/components/behaviors/optimization/strict_instruction_following.md
+  version: 1.0.0
+  type: behaviors
+  dependencies:
+  - path: behaviors/communication/ksi_events_as_tool_calls
+    hash: sha256:d3c8b1dbc6e39ede8e70a02c3c140049b5f7c085b2f03469d4a4493338acd030
+evaluator:
+  instance_id: ksi_instance_cfe24a842c55
+  tester: claude_code
+environment:
+  model: claude-sonnet-4
+  model_version_date: '2025-05-14'
+  test_framework: ksi_component_test_v1
+  ksi_version: 2.0.0
+  ksi_commit: ef2b1f580fdf
+  python_version: 3.11.5
+results:
+  status: timeout
+  test_suite: ksi_tool_use_validation
+  tests_passed: 0
+  tests_total: 1
+  performance_class: standard
+  tests:
+    basic_response:
+      status: failed
+      notes: Agent did not respond within timeout period
+metadata:
+  created_at: '2025-08-04T17:54:08.686763+00:00'
+  expires_at: '2026-08-04T17:54:08.686763+00:00'
+  test_session_id: test_session_20250804_175408
