@@ -448,8 +448,22 @@ components:
       model: claude-sonnet-4
       status: timeout
       test_suite: ksi_tool_use_validation
+  sha256:18bb54a11b1062c34a232bb3c011225d9b40b3fd661b7658ccfbe5e37103af7a:
+    path: components/behaviors/core/claude_code_override.md
+    version: unknown
+    evaluations:
+    - certificate_id: eval_2025_08_06_7103af7a
+      date: '2025-08-06'
+      model: claude-sonnet-4
+      status: timeout
+      test_suite: behavioral_effectiveness
+    - certificate_id: eval_2025_08_06_7103af7a
+      date: '2025-08-06'
+      model: claude-sonnet-4
+      status: timeout
+      test_suite: behavioral_effectiveness
 instance:
   id: ksi_instance_cfe24a842c55
   name: KSI Development Instance
-last_updated: '2025-08-04T18:08:17.023323+00:00'
+last_updated: '2025-08-06T03:40:25.538952+00:00'
 registry_version: 1.0.0

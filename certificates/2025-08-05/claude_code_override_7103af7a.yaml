@@ -1,0 +1,32 @@
+certificate:
+  id: eval_2025_08_06_7103af7a
+  version: '1.0'
+component:
+  hash: sha256:18bb54a11b1062c34a232bb3c011225d9b40b3fd661b7658ccfbe5e37103af7a
+  path: var/lib/compositions/components/behaviors/core/claude_code_override.md
+  version: unknown
+  type: behaviors
+evaluator:
+  instance_id: ksi_instance_cfe24a842c55
+  tester: claude_code
+environment:
+  model: claude-sonnet-4
+  model_version_date: '2025-05-14'
+  test_framework: ksi_component_test_v1
+  ksi_version: 2.0.0
+  ksi_commit: 5d7eb8fee1db
+  python_version: 3.11.5
+results:
+  status: timeout
+  test_suite: behavioral_effectiveness
+  tests_passed: 0
+  tests_total: 1
+  performance_class: standard
+  tests:
+    basic_response:
+      status: failed
+      notes: Agent did not respond within timeout period
+metadata:
+  created_at: '2025-08-06T03:40:25.521400+00:00'
+  expires_at: '2026-08-06T03:40:25.521400+00:00'
+  test_session_id: test_session_20250806_034025
