@@ -1,0 +1,35 @@
+certificate:
+  id: eval_2025_08_06_ec871a5d
+  version: '1.0'
+component:
+  hash: sha256:723e18be77e906146fad6d86eb219ec23d1f82982b398ec056f6139dec871a5d
+  path: var/lib/compositions/components/personas/conversationalists/hello_agent_optimized.md
+  version: 2.0.0
+  type: personas
+  dependencies:
+  - path: core/base_agent
+    hash: sha256:ed68507097367dc195d26ad544546620c9fe7b6a03fc945c8e4b29f29aee7170
+evaluator:
+  instance_id: ksi_instance_cfe24a842c55
+  tester: claude_code
+environment:
+  model: claude-sonnet-4
+  model_version_date: '2025-05-14'
+  test_framework: ksi_component_test_v1
+  ksi_version: 2.0.0
+  ksi_commit: 39a593fcce45
+  python_version: 3.11.5
+results:
+  status: passing
+  test_suite: basic_effectiveness
+  tests_passed: 1
+  tests_total: 1
+  performance_class: standard
+  tests:
+    basic_response:
+      status: passed
+      notes: Agent responded successfully
+metadata:
+  created_at: '2025-08-06T17:06:26.523830+00:00'
+  expires_at: '2026-08-06T17:06:26.523830+00:00'
+  test_session_id: test_session_20250806_170626

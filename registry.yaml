@@ -462,8 +462,26 @@ components:
       model: claude-sonnet-4
       status: timeout
       test_suite: behavioral_effectiveness
+  sha256:dac4dd8efad9d201396c5c63c4b6d8999b708b112aa52061f219373bf295184f:
+    path: components/personas/conversationalists/hello_agent.md
+    version: 1.0.0
+    evaluations:
+    - certificate_id: eval_2025_08_06_f295184f
+      date: '2025-08-06'
+      model: claude-sonnet-4
+      status: passing
+      test_suite: basic_effectiveness
+  sha256:723e18be77e906146fad6d86eb219ec23d1f82982b398ec056f6139dec871a5d:
+    path: components/personas/conversationalists/hello_agent_optimized.md
+    version: 2.0.0
+    evaluations:
+    - certificate_id: eval_2025_08_06_ec871a5d
+      date: '2025-08-06'
+      model: claude-sonnet-4
+      status: passing
+      test_suite: basic_effectiveness
 instance:
   id: ksi_instance_cfe24a842c55
   name: KSI Development Instance
-last_updated: '2025-08-06T03:40:25.538952+00:00'
+last_updated: '2025-08-06T17:06:26.540964+00:00'
 registry_version: 1.0.0
