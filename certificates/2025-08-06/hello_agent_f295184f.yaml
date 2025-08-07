@@ -17,16 +17,19 @@ environment:
   model_version_date: '2025-05-14'
   test_framework: ksi_component_test_v1
   ksi_version: 2.0.0
-  ksi_commit: d0a61a0c177c
+  ksi_commit: c0f4797b4c71
   python_version: 3.11.5
 results:
   status: passing
+  test_suite: basic_effectiveness
   tests_passed: 1
   tests_total: 1
-  scores:
-    baseline_quality: 0.75
-  test_suite: basic_effectiveness
+  performance_class: standard
+  tests:
+    basic_response:
+      status: passed
+      notes: Agent responded successfully
 metadata:
-  created_at: '2025-08-06T19:21:47.274272+00:00'
-  expires_at: '2026-08-06T19:21:47.274272+00:00'
-  test_session_id: test_session_20250806_192147
+  created_at: '2025-08-06T21:27:08.467807+00:00'
+  expires_at: '2026-08-06T21:27:08.467807+00:00'
+  test_session_id: test_session_20250806_212708
