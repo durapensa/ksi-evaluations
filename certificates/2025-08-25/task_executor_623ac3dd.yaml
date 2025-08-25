@@ -1,0 +1,31 @@
+certificate:
+  id: eval_2025_08_25_623ac3dd
+  version: '1.0'
+component:
+  hash: sha256:1e74ae8f94bd3fc7847cf59037a46a15755e1fd8e63332723d8861f4623ac3dd
+  path: var/lib/compositions/components/core/task_executor.md
+  version: 2.0.0
+  type: core
+evaluator:
+  instance_id: ksi_instance_cfe24a842c55
+  tester: claude_code
+environment:
+  model: claude-cli/sonnet
+  model_version_date: '2025-05-14'
+  test_framework: ksi_component_test_v1
+  ksi_version: 2.0.0
+  ksi_commit: 242d4d229754
+  python_version: 3.11.5
+results:
+  status: error
+  test_suite: core_functionality
+  tests: {}
+  notes:
+  - 'Failed to spawn test agent: Failed to render component core/task_executor: Failed
+    to render component core/task_executor to agent manifest: Failed to render component
+    core/task_executor: Cannot resolve variable ''#if validation_level == "basic"''
+    in template'
+metadata:
+  created_at: '2025-08-25T18:59:23.010499+00:00'
+  expires_at: '2026-08-25T18:59:23.010499+00:00'
+  test_session_id: test_session_20250825_185923

@@ -1,0 +1,32 @@
+certificate:
+  id: eval_2025_08_25_f8bb8a06
+  version: '1.0'
+component:
+  hash: sha256:9f07fc6d50371508544f4090000175a09e13929b5688f9784bc98d58f8bb8a06
+  path: var/lib/compositions/components/core/task_executor.md
+  version: 2.0.0
+  type: core
+evaluator:
+  instance_id: ksi_instance_cfe24a842c55
+  tester: claude_code
+environment:
+  model: claude-cli/sonnet
+  model_version_date: '2025-05-14'
+  test_framework: ksi_component_test_v1
+  ksi_version: 2.0.0
+  ksi_commit: 242d4d229754
+  python_version: 3.11.5
+results:
+  status: passing
+  test_suite: core_functionality
+  tests_passed: 1
+  tests_total: 1
+  performance_class: standard
+  tests:
+    basic_response:
+      status: passed
+      notes: Agent responded successfully
+metadata:
+  created_at: '2025-08-25T19:00:56.823985+00:00'
+  expires_at: '2026-08-25T19:00:56.823985+00:00'
+  test_session_id: test_session_20250825_190056

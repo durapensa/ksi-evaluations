@@ -603,8 +603,26 @@ components:
       model: claude-cli/sonnet
       status: error
       test_suite: core_functionality
+  sha256:1e74ae8f94bd3fc7847cf59037a46a15755e1fd8e63332723d8861f4623ac3dd:
+    path: components/core/task_executor.md
+    version: 2.0.0
+    evaluations:
+    - certificate_id: eval_2025_08_25_623ac3dd
+      date: '2025-08-25'
+      model: claude-cli/sonnet
+      status: error
+      test_suite: core_functionality
+  sha256:9f07fc6d50371508544f4090000175a09e13929b5688f9784bc98d58f8bb8a06:
+    path: components/core/task_executor.md
+    version: 2.0.0
+    evaluations:
+    - certificate_id: eval_2025_08_25_f8bb8a06
+      date: '2025-08-25'
+      model: claude-cli/sonnet
+      status: passing
+      test_suite: core_functionality
 instance:
   id: ksi_instance_cfe24a842c55
   name: KSI Development Instance
-last_updated: '2025-08-25T17:13:15.018325+00:00'
+last_updated: '2025-08-25T19:00:56.841414+00:00'
 registry_version: 1.0.0
