@@ -1,0 +1,170 @@
+name: workflow_orchestration
+version: 1.0.0
+description: Certification test suite for workflow components
+author: ksi-certification
+created: 2025-01-28
+
+tests:
+  - name: coordination_initialization
+    prompt: |
+      You are coordinating a data analysis workflow.
+      Initialize the workflow by:
+      1. Setting workflow state to 'initializing'
+      2. Announcing readiness to coordinate
+      3. Requesting available agents
+    evaluators:
+      - type: event_sequence
+        expected_events:
+          - state:entity:create
+          - agent:status
+        weight: 0.4
+      - type: contains_any
+        patterns: [coordinate, ready, workflow, initialize]
+        weight: 0.3
+      - type: no_contamination
+        weight: 0.3
+    success_threshold: 0.85
+    tags: [initialization, coordination]
+    
+  - name: task_distribution
+    prompt: |
+      You have 3 tasks to distribute:
+      1. Data collection (agent: collector)
+      2. Data analysis (agent: analyzer)  
+      3. Report generation (agent: reporter)
+      
+      Distribute these tasks to the appropriate agents.
+    evaluators:
+      - type: event_count
+        event: completion:async
+        expected_count: 3
+        weight: 0.5
+      - type: task_assignment_check
+        expected_assignments:
+          collector: data collection
+          analyzer: data analysis
+          reporter: report generation
+        weight: 0.3
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.85
+    tags: [task_distribution, delegation]
+    
+  - name: sequential_orchestration
+    prompt: |
+      Orchestrate a sequential workflow:
+      STEP 1: Tell agent_a to "process input"
+      WAIT for completion
+      STEP 2: Tell agent_b to "analyze results"
+      WAIT for completion
+      STEP 3: Report "workflow complete"
+    evaluators:
+      - type: event_order
+        expected_order:
+          - event: completion:async
+            data: {agent_id: agent_a}
+          - event: completion:async
+            data: {agent_id: agent_b}
+          - event: agent:result
+        weight: 0.6
+      - type: contains
+        pattern: "workflow complete"
+        weight: 0.2
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.85
+    tags: [sequential, orchestration]
+    
+  - name: parallel_coordination
+    prompt: |
+      Execute these tasks in parallel:
+      - Task A: Send "analyze data" to agent_1
+      - Task B: Send "generate report" to agent_2
+      - Task C: Send "validate results" to agent_3
+      
+      Then report when all tasks are initiated.
+    evaluators:
+      - type: parallel_events
+        expected_events:
+          - completion:async
+          - completion:async
+          - completion:async
+        time_window_ms: 1000  # Should be nearly simultaneous
+        weight: 0.5
+      - type: contains_any
+        patterns: [initiated, started, launched, parallel]
+        weight: 0.3
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.85
+    tags: [parallel, coordination]
+    
+  - name: error_recovery
+    prompt: |
+      A workflow task failed with error "agent_timeout".
+      Implement recovery by:
+      1. Log the error
+      2. Attempt retry with backup agent
+      3. Update workflow state
+    evaluators:
+      - type: contains_any
+        patterns: [error, timeout, retry, backup, recovery]
+        weight: 0.3
+      - type: event_extraction
+        expected_events:
+          - monitor:log
+          - completion:async  # Retry attempt
+          - state:entity:update
+        weight: 0.5
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.8
+    tags: [error_handling, recovery]
+    
+  - name: state_aggregation
+    prompt: |
+      Three agents have reported their results:
+      - agent_1: {status: "complete", value: 10}
+      - agent_2: {status: "complete", value: 20}
+      - agent_3: {status: "complete", value: 30}
+      
+      Aggregate these results and store the sum.
+    evaluators:
+      - type: calculation_check
+        expected_value: 60
+        weight: 0.4
+      - type: event_extraction
+        expected_event: state:entity:update
+        weight: 0.4
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.85
+    tags: [aggregation, state_management]
+
+contamination_patterns:
+  - pattern: regex
+    value: "I (cannot|can't|don't|won't) (coordinate|orchestrate|manage)"
+    severity: high
+  - pattern: contains
+    value: "As an AI"
+    severity: high
+  - pattern: contains
+    value: "language model"
+    severity: high
+  - pattern: contains
+    value: "I'm not able to actually"
+    severity: high
+
+scoring:
+  method: weighted_average
+  pass_threshold: 0.85
+  certification_levels:
+    certified: 0.85
+    provisional: 0.75
+    failed: 0.0
+    
+metadata:
+  applicable_to: 
+    - component_type: workflow
+  excluded_components: []
+  recertification_period_days: 90

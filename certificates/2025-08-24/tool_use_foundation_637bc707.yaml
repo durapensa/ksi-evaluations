@@ -1,0 +1,32 @@
+certificate:
+  id: eval_2025_08_24_637bc707
+  version: '1.0'
+component:
+  hash: sha256:e83ca92066a983b59d9e8e30814cf410de89c31cc83274dfdbd881d0637bc707
+  path: var/lib/compositions/components/llanguage/v1/tool_use_foundation.md
+  version: 1.0.0
+  type: llanguage
+evaluator:
+  instance_id: ksi_instance_cfe24a842c55
+  tester: claude_code
+environment:
+  model: claude-sonnet-4-20250514
+  model_version_date: '2025-05-14'
+  test_framework: ksi_component_test_v1
+  ksi_version: 2.0.0
+  ksi_commit: 814ff0d9c5b3
+  python_version: 3.11.5
+results:
+  status: timeout
+  test_suite: behavior_certification
+  tests_passed: 0
+  tests_total: 1
+  performance_class: standard
+  tests:
+    basic_response:
+      status: failed
+      notes: Agent did not respond within timeout period (300s)
+metadata:
+  created_at: '2025-08-24T20:24:41.714594+00:00'
+  expires_at: '2026-08-24T20:24:41.714594+00:00'
+  test_session_id: test_session_20250824_202441

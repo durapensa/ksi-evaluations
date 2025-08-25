@@ -1,0 +1,112 @@
+name: behavior_certification
+version: 1.0.0
+description: Certification test suite for behavior components
+author: ksi-certification
+created: 2025-01-28
+
+tests:
+  - name: behavior_modification
+    prompt: "Demonstrate the specific behavior this component adds to an agent."
+    evaluators:
+      - type: behavior_presence
+        check_for: component_specific_behavior
+        weight: 0.5
+      - type: clear_modification
+        baseline_comparison: true
+        weight: 0.3
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.85
+    tags: [behavior, modification]
+    
+  - name: composability
+    prompt: |
+      Show how this behavior combines with a base agent's capabilities.
+      Original instruction: "List three items"
+      Your behavior should modify HOW this is done, not WHAT is done.
+    evaluators:
+      - type: instruction_preserved
+        original_intent_maintained: true
+        weight: 0.4
+      - type: behavior_applied
+        modification_present: true
+        weight: 0.4
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.85
+    tags: [composability, integration]
+    
+  - name: behavior_boundaries
+    prompt: |
+      You are asked to do something OUTSIDE your behavioral modification scope.
+      Task: "Solve a math problem"
+      
+      Apply your behavior ONLY if relevant, otherwise proceed normally.
+    evaluators:
+      - type: appropriate_application
+        only_when_relevant: true
+        weight: 0.5
+      - type: no_overreach
+        stays_in_scope: true
+        weight: 0.3
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.85
+    tags: [boundaries, scope]
+    
+  - name: behavior_consistency
+    prompt: "Apply your behavior to three different tasks and show consistency."
+    evaluators:
+      - type: consistency_check
+        across_multiple_applications: true
+        weight: 0.5
+      - type: behavior_signature
+        recognizable_pattern: true
+        weight: 0.3
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.85
+    tags: [consistency, reliability]
+    
+  - name: non_interference
+    prompt: |
+      Core functionality test:
+      1. Emit an agent:status event
+      2. Apply your behavior
+      3. Confirm core functionality still works
+    evaluators:
+      - type: event_extraction
+        expected_event: agent:status
+        weight: 0.4
+      - type: functionality_preserved
+        core_features_intact: true
+        weight: 0.4
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.9
+    tags: [non_interference, compatibility]
+
+contamination_patterns:
+  - pattern: regex
+    value: "I (cannot|can't|don't|won't) (modify|change|alter)"
+    severity: high
+  - pattern: contains
+    value: "As an AI"
+    severity: high
+  - pattern: contains
+    value: "language model"
+    severity: high
+
+scoring:
+  method: weighted_average
+  pass_threshold: 0.85
+  certification_levels:
+    certified: 0.85
+    provisional: 0.75
+    failed: 0.0
+    
+metadata:
+  applicable_to: 
+    - component_type: behavior
+  excluded_components: []
+  recertification_period_days: 90

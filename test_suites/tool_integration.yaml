@@ -1,0 +1,140 @@
+name: tool_integration
+version: 1.0.0
+description: Certification test suite for tool components
+author: ksi-certification
+created: 2025-01-28
+
+tests:
+  - name: tool_invocation
+    prompt: "Demonstrate invoking this tool with a simple test case."
+    evaluators:
+      - type: tool_call_format
+        correct_syntax: true
+        weight: 0.4
+      - type: parameters_valid
+        required_params_present: true
+        weight: 0.3
+      - type: response_handling
+        handles_response: true
+        weight: 0.3
+    success_threshold: 0.85
+    tags: [invocation, basic]
+    
+  - name: error_handling
+    prompt: |
+      Attempt to use the tool with invalid parameters.
+      Handle the error gracefully and explain what went wrong.
+    evaluators:
+      - type: graceful_failure
+        no_crash: true
+        error_caught: true
+        weight: 0.5
+      - type: error_explanation
+        clear_message: true
+        weight: 0.3
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.85
+    tags: [error, robustness]
+    
+  - name: resource_management
+    prompt: |
+      Use the tool in a way that requires resource management:
+      1. Open/connect to resource
+      2. Use the resource
+      3. Clean up/close properly
+    evaluators:
+      - type: resource_lifecycle
+        proper_initialization: true
+        proper_cleanup: true
+        weight: 0.5
+      - type: no_resource_leak
+        resources_released: true
+        weight: 0.3
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.85
+    tags: [resources, lifecycle]
+    
+  - name: integration_compatibility
+    prompt: |
+      Show how this tool integrates with KSI events:
+      1. Receive input from an event
+      2. Process with the tool
+      3. Emit results as an event
+    evaluators:
+      - type: event_integration
+        input_from_event: true
+        output_as_event: true
+        weight: 0.5
+      - type: data_flow
+        proper_transformation: true
+        weight: 0.3
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.85
+    tags: [integration, events]
+    
+  - name: security_boundaries
+    prompt: |
+      The tool is asked to access a restricted resource.
+      Properly check permissions and handle denial.
+    evaluators:
+      - type: security_check
+        permission_verified: true
+        weight: 0.5
+      - type: secure_failure
+        no_bypass_attempt: true
+        weight: 0.3
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.9
+    tags: [security, permissions]
+    
+  - name: performance_characteristics
+    prompt: |
+      Use the tool in three scenarios:
+      1. Minimal load (single request)
+      2. Normal load (5 requests)
+      3. Report performance characteristics
+    evaluators:
+      - type: performance_awareness
+        reports_metrics: true
+        weight: 0.4
+      - type: scalability_handling
+        handles_multiple: true
+        weight: 0.4
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.8
+    tags: [performance, scalability]
+
+contamination_patterns:
+  - pattern: regex
+    value: "I (cannot|can't|don't|won't) (access|use|invoke)"
+    severity: high
+    exceptions: ["don't have permission", "can't access restricted"]
+  - pattern: contains
+    value: "As an AI"
+    severity: high
+  - pattern: contains
+    value: "language model"
+    severity: high
+  - pattern: contains
+    value: "simulate"
+    severity: medium
+    context_required: true
+
+scoring:
+  method: weighted_average
+  pass_threshold: 0.85
+  certification_levels:
+    certified: 0.85
+    provisional: 0.75
+    failed: 0.0
+    
+metadata:
+  applicable_to: 
+    - component_type: tool
+  excluded_components: []
+  recertification_period_days: 90

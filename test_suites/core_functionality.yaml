@@ -1,0 +1,139 @@
+name: core_functionality
+version: 1.0.0
+description: Certification test suite for core components
+author: ksi-certification
+created: 2025-01-28
+
+tests:
+  - name: event_emission
+    prompt: "Emit an agent:status event with status 'ready' and then respond with 'OK'."
+    evaluators:
+      - type: event_extraction
+        expected_event: agent:status
+        expected_data:
+          status: ready
+        weight: 0.6
+      - type: contains
+        pattern: "OK"
+        weight: 0.2
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.9
+    tags: [event, emission, core]
+    
+  - name: tool_use_comprehension
+    prompt: |
+      Using the KSI tool_use pattern, emit these events in order:
+      1. agent:progress with progress=0.5
+      2. agent:result with result="test complete"
+    evaluators:
+      - type: event_sequence
+        expected_sequence:
+          - event: agent:progress
+            data: {progress: 0.5}
+          - event: agent:result
+            data: {result: "test complete"}
+        weight: 0.7
+      - type: format_match
+        format: ksi_tool_use
+        weight: 0.3
+    success_threshold: 0.9
+    tags: [tool_use, events, sequence]
+    
+  - name: state_management
+    prompt: "Create a state entity with type='test' and id='core_test', then retrieve it."
+    evaluators:
+      - type: event_extraction
+        expected_event: state:entity:create
+        expected_data:
+          type: test
+          id: core_test
+        weight: 0.4
+      - type: event_extraction
+        expected_event: state:entity:get
+        expected_data:
+          type: test
+          id: core_test
+        weight: 0.4
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.85
+    tags: [state, entity, management]
+    
+  - name: error_handling
+    prompt: "Attempt to emit an event you don't have permission for (optimization:run), handle the error gracefully, and report what happened."
+    evaluators:
+      - type: contains_any
+        patterns: [permission, denied, not allowed, unauthorized, cannot emit]
+        weight: 0.4
+      - type: graceful_failure
+        no_crash: true
+        error_reported: true
+        weight: 0.4
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.8
+    tags: [error, handling, permissions]
+    
+  - name: message_routing
+    prompt: "Send a message to agent 'test_receiver' with content 'ping', and confirm the message was sent."
+    evaluators:
+      - type: event_extraction
+        expected_event: message:send
+        expected_data:
+          to: test_receiver
+          content: ping
+        weight: 0.5
+      - type: contains_any
+        patterns: [sent, delivered, message sent, confirmed]
+        weight: 0.3
+      - type: no_contamination
+        weight: 0.2
+    success_threshold: 0.85
+    tags: [messaging, routing, communication]
+    
+  - name: capability_awareness
+    prompt: "List your current capabilities and allowed events."
+    evaluators:
+      - type: contains_any
+        patterns: [capabilities, allowed_events, permissions]
+        weight: 0.3
+      - type: list_format
+        min_items: 1
+        weight: 0.3
+      - type: accuracy_check
+        verify_against: component_capabilities
+        weight: 0.4
+    success_threshold: 0.8
+    tags: [capabilities, self_awareness]
+
+contamination_patterns:
+  - pattern: regex
+    value: "I (cannot|can't|don't|won't|must not|should not) (emit|send|create)"
+    severity: high
+    exceptions: ["don't have permission", "cannot emit unauthorized"]
+  - pattern: contains
+    value: "As an AI"
+    severity: high
+  - pattern: contains
+    value: "language model"
+    severity: high
+  - pattern: contains
+    value: "I apologize"
+    severity: medium
+    context_required: true
+
+scoring:
+  method: weighted_average
+  pass_threshold: 0.90  # Higher threshold for core components
+  certification_levels:
+    certified: 0.90
+    provisional: 0.85
+    failed: 0.0
+    
+metadata:
+  applicable_to: 
+    - component_type: core
+  excluded_components: []
+  recertification_period_days: 90
+  critical: true  # Core components are critical infrastructure

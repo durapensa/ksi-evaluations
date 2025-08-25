@@ -500,8 +500,17 @@ components:
       model: claude-sonnet-4
       status: passing
       test_suite: basic_effectiveness
+  sha256:e83ca92066a983b59d9e8e30814cf410de89c31cc83274dfdbd881d0637bc707:
+    path: components/llanguage/v1/tool_use_foundation.md
+    version: 1.0.0
+    evaluations:
+    - certificate_id: eval_2025_08_24_637bc707
+      date: '2025-08-24'
+      model: claude-sonnet-4-20250514
+      status: timeout
+      test_suite: behavior_certification
 instance:
   id: ksi_instance_cfe24a842c55
   name: KSI Development Instance
-last_updated: '2025-08-06T21:27:31.406509+00:00'
+last_updated: '2025-08-24T20:24:41.732126+00:00'
 registry_version: 1.0.0

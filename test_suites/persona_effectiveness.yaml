@@ -1,0 +1,112 @@
+name: persona_effectiveness
+version: 1.0.0
+description: Certification test suite for persona components
+author: ksi-certification
+created: 2025-01-28
+
+tests:
+  - name: role_consistency
+    prompt: "Please introduce yourself and explain your primary expertise."
+    evaluators:
+      - type: semantic_match
+        expected_themes: [role, expertise, background, experience]
+        weight: 0.4
+      - type: word_count
+        min: 30
+        max: 200
+        weight: 0.2
+      - type: no_contamination
+        weight: 0.4
+    success_threshold: 0.8
+    tags: [identity, consistency]
+    
+  - name: domain_knowledge
+    prompt: "What are the three most important considerations in your field of expertise?"
+    evaluators:
+      - type: semantic_relevance
+        domain: component_specific
+        weight: 0.5
+      - type: format_match
+        format: enumerated_list
+        weight: 0.2
+      - type: no_contamination
+        weight: 0.3
+    success_threshold: 0.8
+    tags: [expertise, knowledge]
+    
+  - name: instruction_following
+    prompt: "In exactly 5 bullet points, describe your typical workflow."
+    evaluators:
+      - type: bullet_count
+        expected: 5
+        weight: 0.4
+      - type: format_match
+        format: bullet_list
+        weight: 0.3
+      - type: semantic_relevance
+        domain: workflow
+        weight: 0.3
+    success_threshold: 0.85
+    tags: [instruction, format]
+    
+  - name: problem_solving
+    prompt: "A colleague asks for your help with a complex problem in your domain. How do you approach it?"
+    evaluators:
+      - type: contains_any
+        patterns: [analyze, assess, evaluate, understand, investigate, approach]
+        weight: 0.3
+      - type: structured_response
+        expected_structure: [problem_understanding, methodology, solution_approach]
+        weight: 0.4
+      - type: no_contamination
+        weight: 0.3
+    success_threshold: 0.75
+    tags: [problem_solving, methodology]
+    
+  - name: collaboration
+    prompt: "How do you prefer to collaborate with other specialists?"
+    evaluators:
+      - type: semantic_match
+        expected_themes: [communication, coordination, teamwork, sharing]
+        weight: 0.4
+      - type: tone_consistency
+        expected_tone: professional_collaborative
+        weight: 0.3
+      - type: no_contamination
+        weight: 0.3
+    success_threshold: 0.75
+    tags: [collaboration, communication]
+
+contamination_patterns:
+  - pattern: regex
+    value: "I (cannot|can't|don't|won't|must not|should not|am unable to)"
+    severity: high
+    exceptions: ["I don't have access to", "I can't see"]
+  - pattern: contains
+    value: "As an AI"
+    severity: high
+  - pattern: contains
+    value: "I'm sorry"
+    severity: medium
+    context_required: true  # Only flag if apologizing unnecessarily
+  - pattern: contains
+    value: "language model"
+    severity: high
+  - pattern: contains_any
+    values: ["ethical", "harmful", "appropriate", "responsible AI", "safety"]
+    severity: medium
+    context_required: true  # Only flag if not relevant to domain
+
+scoring:
+  method: weighted_average
+  pass_threshold: 0.80
+  certification_levels:
+    certified: 0.80
+    provisional: 0.70
+    failed: 0.0
+    
+metadata:
+  applicable_to: 
+    - component_type: persona
+  excluded_components: []
+  recertification_period_days: 90
