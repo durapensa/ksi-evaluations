@@ -552,6 +552,11 @@ components:
       model: claude-sonnet-4-20250514
       status: passing
       test_suite: behavior_certification
+    - certificate_id: eval_2025_08_25_82d38f76
+      date: '2025-08-25'
+      model: claude-cli/claude-sonnet-4-20250514
+      status: passing
+      test_suite: behavior_certification
   sha256:e22812325a5fdda74c1b25d720f104592d868fa5dc0f510dad2db72eaba24561:
     path: components/llanguage/v1/semantic_routing.md
     version: 1.0.0
@@ -582,5 +587,5 @@ components:
 instance:
   id: ksi_instance_cfe24a842c55
   name: KSI Development Instance
-last_updated: '2025-08-25T16:32:51.043376+00:00'
+last_updated: '2025-08-25T16:59:29.972622+00:00'
 registry_version: 1.0.0
