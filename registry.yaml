@@ -566,6 +566,11 @@ components:
       model: claude-sonnet-4-20250514
       status: passing
       test_suite: behavior_certification
+    - certificate_id: eval_2025_08_25_aba24561
+      date: '2025-08-25'
+      model: claude-cli/sonnet
+      status: passing
+      test_suite: behavior_certification
   sha256:eab500ba70afdabe2b045851a79c04978811aada9bb66d1efdb55d1e5fe4c4e2:
     path: components/llanguage/v1/emergence_patterns.md
     version: 1.0.0
@@ -573,6 +578,11 @@ components:
     - certificate_id: eval_2025_08_25_5fe4c4e2
       date: '2025-08-25'
       model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: behavior_certification
+    - certificate_id: eval_2025_08_25_5fe4c4e2
+      date: '2025-08-25'
+      model: claude-cli/sonnet
       status: passing
       test_suite: behavior_certification
   sha256:e8ce5d14162b75710d1cf6923cd98907b3d1c9c84cd37bfc3459ce0c890297b4:
@@ -584,8 +594,17 @@ components:
       model: claude-sonnet-4-20250514
       status: passing
       test_suite: behavior_certification
+  sha256:3b64f658cc3e0332df24ea3df9a993d6fb7f75704d41a929d0ba0e32c87ada57:
+    path: components/core/task_executor.md
+    version: 2.0.0
+    evaluations:
+    - certificate_id: eval_2025_08_25_c87ada57
+      date: '2025-08-25'
+      model: claude-cli/sonnet
+      status: error
+      test_suite: core_functionality
 instance:
   id: ksi_instance_cfe24a842c55
   name: KSI Development Instance
-last_updated: '2025-08-25T16:59:29.972622+00:00'
+last_updated: '2025-08-25T17:13:15.018325+00:00'
 registry_version: 1.0.0
