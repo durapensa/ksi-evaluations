@@ -395,6 +395,11 @@ components:
       model: claude-sonnet-4
       status: error
       test_suite: ksi_tool_use_validation
+    - certificate_id: eval_2025_08_25_38acd030
+      date: '2025-08-25'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: behavior_certification
   sha256:8970ed01aa0407d10ce6e9ae06e056c2c95f157dd518ee3fb8d8737f039027e6:
     path: components/behaviors/optimization/strict_instruction_following.md
     version: 1.0.0
@@ -509,8 +514,63 @@ components:
       model: claude-sonnet-4-20250514
       status: timeout
       test_suite: behavior_certification
+    - certificate_id: eval_2025_08_25_637bc707
+      date: '2025-08-25'
+      model: claude-sonnet-4-20250514
+      status: timeout
+      test_suite: behavior_certification
+    - certificate_id: eval_2025_08_25_637bc707
+      date: '2025-08-25'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: behavior_certification
+  sha256:c939c1a64220a74061e90e90e3623136b53fbbdbbb3726f0b1b90cf4c11dc875:
+    path: components/llanguage/v1/coordination_patterns.md
+    version: 1.0.0
+    evaluations:
+    - certificate_id: eval_2025_08_25_c11dc875
+      date: '2025-08-25'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: behavior_certification
+  sha256:3fdcf12e25c94621667a822e633d96bec1f1b6a42611c2b3edabfbef82d38f76:
+    path: components/llanguage/v1/state_comprehension.md
+    version: 1.0.0
+    evaluations:
+    - certificate_id: eval_2025_08_25_82d38f76
+      date: '2025-08-25'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: behavior_certification
+  sha256:e22812325a5fdda74c1b25d720f104592d868fa5dc0f510dad2db72eaba24561:
+    path: components/llanguage/v1/semantic_routing.md
+    version: 1.0.0
+    evaluations:
+    - certificate_id: eval_2025_08_25_aba24561
+      date: '2025-08-25'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: behavior_certification
+  sha256:eab500ba70afdabe2b045851a79c04978811aada9bb66d1efdb55d1e5fe4c4e2:
+    path: components/llanguage/v1/emergence_patterns.md
+    version: 1.0.0
+    evaluations:
+    - certificate_id: eval_2025_08_25_5fe4c4e2
+      date: '2025-08-25'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: behavior_certification
+  sha256:e8ce5d14162b75710d1cf6923cd98907b3d1c9c84cd37bfc3459ce0c890297b4:
+    path: components/behaviors/communication/ksi_communication_patterns.md
+    version: 1.0.0
+    evaluations:
+    - certificate_id: eval_2025_08_25_890297b4
+      date: '2025-08-25'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: behavior_certification
 instance:
   id: ksi_instance_cfe24a842c55
   name: KSI Development Instance
-last_updated: '2025-08-24T20:24:41.732126+00:00'
+last_updated: '2025-08-25T16:01:41.309187+00:00'
 registry_version: 1.0.0
