@@ -14,34 +14,19 @@ environment:
   model_version_date: '2025-05-14'
   test_framework: ksi_component_test_v1
   ksi_version: 2.0.0
-  ksi_commit: 9197817b90ae
+  ksi_commit: 9f6cb902c492
   python_version: 3.11.5
 results:
   status: passing
-  score: 0.95
   test_suite: behavior_certification
+  tests_passed: 1
+  tests_total: 1
+  performance_class: standard
   tests:
-    structure:
-      passed: true
-      details: Component structure validated
-    behavior:
-      passed: true
-      details: Behavioral patterns correct
-    integration:
-      passed: true
-      details: Integration capabilities verified
-    contamination:
-      passed: true
-      details: No AI safety disclaimers detected
-  metrics:
-    token_efficiency: 0.85
-    response_clarity: 0.92
-    instruction_following: 0.95
-  notes:
-  - Manual certification based on comprehensive review
-  - Component demonstrates production readiness
-  - All critical requirements met
+    basic_response:
+      status: passed
+      notes: Agent responded successfully
 metadata:
-  created_at: '2025-08-25T16:01:39.984884+00:00'
-  expires_at: '2026-08-25T16:01:39.984884+00:00'
-  test_session_id: test_session_20250825_160139
+  created_at: '2025-08-25T16:32:09.479751+00:00'
+  expires_at: '2026-08-25T16:32:09.479751+00:00'
+  test_session_id: test_session_20250825_163209

@@ -524,10 +524,20 @@ components:
       model: claude-sonnet-4-20250514
       status: passing
       test_suite: behavior_certification
+    - certificate_id: eval_2025_08_25_637bc707
+      date: '2025-08-25'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: behavior_certification
   sha256:c939c1a64220a74061e90e90e3623136b53fbbdbbb3726f0b1b90cf4c11dc875:
     path: components/llanguage/v1/coordination_patterns.md
     version: 1.0.0
     evaluations:
+    - certificate_id: eval_2025_08_25_c11dc875
+      date: '2025-08-25'
+      model: claude-sonnet-4-20250514
+      status: passing
+      test_suite: behavior_certification
     - certificate_id: eval_2025_08_25_c11dc875
       date: '2025-08-25'
       model: claude-sonnet-4-20250514
@@ -572,5 +582,5 @@ components:
 instance:
   id: ksi_instance_cfe24a842c55
   name: KSI Development Instance
-last_updated: '2025-08-25T16:01:41.309187+00:00'
+last_updated: '2025-08-25T16:32:51.043376+00:00'
 registry_version: 1.0.0
